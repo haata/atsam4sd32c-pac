@@ -13,9 +13,9 @@ impl crate::ResetValue for super::MR {
 #[doc = "Trigger Enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TRGEN_A {
-    #[doc = "0: Hardware triggers are disabled. Starting a conversion is only possible by software."]
+    #[doc = "0: Hardware triggers are disabled. Starting a conversion is only possible by software"]
     DIS = 0,
-    #[doc = "1: Hardware trigger selected by TRGSEL field is enabled."]
+    #[doc = "1: Hardware trigger selected by TRGSEL field is enabled"]
     EN = 1,
 }
 impl From<TRGEN_A> for bool {
@@ -58,12 +58,12 @@ impl<'a> TRGEN_W<'a> {
             self.bit(variant.into())
         }
     }
-    #[doc = "Hardware triggers are disabled. Starting a conversion is only possible by software."]
+    #[doc = "Hardware triggers are disabled. Starting a conversion is only possible by software"]
     #[inline(always)]
     pub fn dis(self) -> &'a mut W {
         self.variant(TRGEN_A::DIS)
     }
-    #[doc = "Hardware trigger selected by TRGSEL field is enabled."]
+    #[doc = "Hardware trigger selected by TRGSEL field is enabled"]
     #[inline(always)]
     pub fn en(self) -> &'a mut W {
         self.variant(TRGEN_A::EN)
@@ -206,9 +206,9 @@ impl<'a> TRGSEL_W<'a> {
 #[doc = "Sleep Mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SLEEP_A {
-    #[doc = "0: Normal Mode: The ADC core and reference voltage circuitry are kept ON between conversions."]
+    #[doc = "0: Normal Mode: The ADC core and reference voltage circuitry are kept ON between conversions"]
     NORMAL = 0,
-    #[doc = "1: Sleep Mode: The wake-up time can be modified by programming FWUP bit."]
+    #[doc = "1: Sleep Mode: The wake-up time can be modified by programming FWUP bit"]
     SLEEP = 1,
 }
 impl From<SLEEP_A> for bool {
@@ -251,12 +251,12 @@ impl<'a> SLEEP_W<'a> {
             self.bit(variant.into())
         }
     }
-    #[doc = "Normal Mode: The ADC core and reference voltage circuitry are kept ON between conversions."]
+    #[doc = "Normal Mode: The ADC core and reference voltage circuitry are kept ON between conversions"]
     #[inline(always)]
     pub fn normal(self) -> &'a mut W {
         self.variant(SLEEP_A::NORMAL)
     }
-    #[doc = "Sleep Mode: The wake-up time can be modified by programming FWUP bit."]
+    #[doc = "Sleep Mode: The wake-up time can be modified by programming FWUP bit"]
     #[inline(always)]
     pub fn sleep(self) -> &'a mut W {
         self.variant(SLEEP_A::SLEEP)
@@ -358,7 +358,7 @@ impl<'a> FWUP_W<'a> {
 pub enum FREERUN_A {
     #[doc = "0: Normal Mode"]
     OFF = 0,
-    #[doc = "1: Free Run Mode: Never wait for any trigger."]
+    #[doc = "1: Free Run Mode: Never wait for any trigger"]
     ON = 1,
 }
 impl From<FREERUN_A> for bool {
@@ -406,7 +406,7 @@ impl<'a> FREERUN_W<'a> {
     pub fn off(self) -> &'a mut W {
         self.variant(FREERUN_A::OFF)
     }
-    #[doc = "Free Run Mode: Never wait for any trigger."]
+    #[doc = "Free Run Mode: Never wait for any trigger"]
     #[inline(always)]
     pub fn on(self) -> &'a mut W {
         self.variant(FREERUN_A::ON)
@@ -787,9 +787,9 @@ impl<'a> SETTLING_W<'a> {
 #[doc = "Analog Change\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ANACH_A {
-    #[doc = "0: No analog change on channel switching: DIFF0, GAIN0 and OFF0 are used for all channels."]
+    #[doc = "0: No analog change on channel switching: DIFF0, GAIN0 and OFF0 are used for all channels"]
     NONE = 0,
-    #[doc = "1: Allows different analog settings for each channel. See ADC_CGR and ADC_COR registers."]
+    #[doc = "1: Allows different analog settings for each channel. See ADC_CGR and ADC_COR registers"]
     ALLOWED = 1,
 }
 impl From<ANACH_A> for bool {
@@ -832,12 +832,12 @@ impl<'a> ANACH_W<'a> {
             self.bit(variant.into())
         }
     }
-    #[doc = "No analog change on channel switching: DIFF0, GAIN0 and OFF0 are used for all channels."]
+    #[doc = "No analog change on channel switching: DIFF0, GAIN0 and OFF0 are used for all channels"]
     #[inline(always)]
     pub fn none(self) -> &'a mut W {
         self.variant(ANACH_A::NONE)
     }
-    #[doc = "Allows different analog settings for each channel. See ADC_CGR and ADC_COR registers."]
+    #[doc = "Allows different analog settings for each channel. See ADC_CGR and ADC_COR registers"]
     #[inline(always)]
     pub fn allowed(self) -> &'a mut W {
         self.variant(ANACH_A::ALLOWED)
@@ -890,9 +890,9 @@ impl<'a> TRANSFER_W<'a> {
 #[doc = "Use Sequence Enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum USEQ_A {
-    #[doc = "0: Normal Mode: The controller converts channels in a simple numeric order depending only on the channel index."]
+    #[doc = "0: Normal Mode: The controller converts channels in a simple numeric order depending only on the channel index"]
     NUM_ORDER = 0,
-    #[doc = "1: User Sequence Mode: The sequence respects what is defined in ADC_SEQR1 and ADC_SEQR2 registers and can be used to convert the same channel several times."]
+    #[doc = "1: User Sequence Mode: The sequence respects what is defined in ADC_SEQR1 and ADC_SEQR2 registers and can be used to convert the same channel several times"]
     REG_ORDER = 1,
 }
 impl From<USEQ_A> for bool {
@@ -935,12 +935,12 @@ impl<'a> USEQ_W<'a> {
             self.bit(variant.into())
         }
     }
-    #[doc = "Normal Mode: The controller converts channels in a simple numeric order depending only on the channel index."]
+    #[doc = "Normal Mode: The controller converts channels in a simple numeric order depending only on the channel index"]
     #[inline(always)]
     pub fn num_order(self) -> &'a mut W {
         self.variant(USEQ_A::NUM_ORDER)
     }
-    #[doc = "User Sequence Mode: The sequence respects what is defined in ADC_SEQR1 and ADC_SEQR2 registers and can be used to convert the same channel several times."]
+    #[doc = "User Sequence Mode: The sequence respects what is defined in ADC_SEQR1 and ADC_SEQR2 registers and can be used to convert the same channel several times"]
     #[inline(always)]
     pub fn reg_order(self) -> &'a mut W {
         self.variant(USEQ_A::REG_ORDER)

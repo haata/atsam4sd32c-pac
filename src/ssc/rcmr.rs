@@ -275,7 +275,7 @@ impl<'a> CKG_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum START_A {
-    #[doc = "0: Continuous, as soon as the receiver is enabled, and immediately after the end of transfer of the previous data."]
+    #[doc = "0: Continuous, as soon as the receiver is enabled, and immediately after the end of transfer of the previous data"]
     CONTINUOUS = 0,
     #[doc = "1: Transmit start"]
     TRANSMIT = 1,
@@ -376,7 +376,7 @@ impl<'a> START_W<'a> {
     pub fn variant(self, variant: START_A) -> &'a mut W {
         unsafe { self.bits(variant.into()) }
     }
-    #[doc = "Continuous, as soon as the receiver is enabled, and immediately after the end of transfer of the previous data."]
+    #[doc = "Continuous, as soon as the receiver is enabled, and immediately after the end of transfer of the previous data"]
     #[inline(always)]
     pub fn continuous(self) -> &'a mut W {
         self.variant(START_A::CONTINUOUS)

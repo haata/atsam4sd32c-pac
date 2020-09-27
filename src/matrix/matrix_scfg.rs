@@ -20,11 +20,11 @@ impl<'a> SLOT_CYCLE_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum DEFMSTR_TYPE_A {
-    #[doc = "0: At the end of current slave access, if no other master request is pending, the slave is disconnected from all masters.This results in having a one cycle latency for the first access of a burst transfer or for a single access."]
+    #[doc = "0: At the end of current slave access, if no other master request is pending, the slave is disconnected from all masters.This results in having a one cycle latency for the first access of a burst transfer or for a single access"]
     NO_DEFAULT = 0,
-    #[doc = "1: At the end of current slave access, if no other master request is pending, the slave stays connected to the last master having accessed it.This results in not having the one cycle latency when the last master tries to access the slave again."]
+    #[doc = "1: At the end of current slave access, if no other master request is pending, the slave stays connected to the last master having accessed it.This results in not having the one cycle latency when the last master tries to access the slave again"]
     LAST = 1,
-    #[doc = "2: At the end of the current slave access, if no other master request is pending, the slave connects to the fixed master the number that has been written in the FIXED_DEFMSTR field.This results in not having the one cycle latency when the fixed master tries to access the slave again."]
+    #[doc = "2: At the end of the current slave access, if no other master request is pending, the slave connects to the fixed master the number that has been written in the FIXED_DEFMSTR field.This results in not having the one cycle latency when the fixed master tries to access the slave again"]
     FIXED = 2,
 }
 impl From<DEFMSTR_TYPE_A> for u8 {
@@ -73,17 +73,17 @@ impl<'a> DEFMSTR_TYPE_W<'a> {
     pub fn variant(self, variant: DEFMSTR_TYPE_A) -> &'a mut W {
         unsafe { self.bits(variant.into()) }
     }
-    #[doc = "At the end of current slave access, if no other master request is pending, the slave is disconnected from all masters.This results in having a one cycle latency for the first access of a burst transfer or for a single access."]
+    #[doc = "At the end of current slave access, if no other master request is pending, the slave is disconnected from all masters.This results in having a one cycle latency for the first access of a burst transfer or for a single access"]
     #[inline(always)]
     pub fn no_default(self) -> &'a mut W {
         self.variant(DEFMSTR_TYPE_A::NO_DEFAULT)
     }
-    #[doc = "At the end of current slave access, if no other master request is pending, the slave stays connected to the last master having accessed it.This results in not having the one cycle latency when the last master tries to access the slave again."]
+    #[doc = "At the end of current slave access, if no other master request is pending, the slave stays connected to the last master having accessed it.This results in not having the one cycle latency when the last master tries to access the slave again"]
     #[inline(always)]
     pub fn last(self) -> &'a mut W {
         self.variant(DEFMSTR_TYPE_A::LAST)
     }
-    #[doc = "At the end of the current slave access, if no other master request is pending, the slave connects to the fixed master the number that has been written in the FIXED_DEFMSTR field.This results in not having the one cycle latency when the fixed master tries to access the slave again."]
+    #[doc = "At the end of the current slave access, if no other master request is pending, the slave connects to the fixed master the number that has been written in the FIXED_DEFMSTR field.This results in not having the one cycle latency when the fixed master tries to access the slave again"]
     #[inline(always)]
     pub fn fixed(self) -> &'a mut W {
         self.variant(DEFMSTR_TYPE_A::FIXED)

@@ -76,7 +76,7 @@ impl<'a> ERSTL_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum KEY_A {
-    #[doc = "165: Writing any other value in this field aborts the write operation.Always reads as 0."]
+    #[doc = "165: Writing any other value in this field aborts the write operation.Always reads as 0"]
     PASSWD = 165,
 }
 impl From<KEY_A> for u8 {
@@ -113,7 +113,7 @@ impl<'a> KEY_W<'a> {
     pub fn variant(self, variant: KEY_A) -> &'a mut W {
         unsafe { self.bits(variant.into()) }
     }
-    #[doc = "Writing any other value in this field aborts the write operation.Always reads as 0."]
+    #[doc = "Writing any other value in this field aborts the write operation.Always reads as 0"]
     #[inline(always)]
     pub fn passwd(self) -> &'a mut W {
         self.variant(KEY_A::PASSWD)

@@ -70,7 +70,7 @@ impl<'a> EXTRST_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum KEY_AW {
-    #[doc = "165: Writing any other value in this field aborts the write operation."]
+    #[doc = "165: Writing any other value in this field aborts the write operation"]
     PASSWD = 165,
 }
 impl From<KEY_AW> for u8 {
@@ -89,7 +89,7 @@ impl<'a> KEY_W<'a> {
     pub fn variant(self, variant: KEY_AW) -> &'a mut W {
         unsafe { self.bits(variant.into()) }
     }
-    #[doc = "Writing any other value in this field aborts the write operation."]
+    #[doc = "Writing any other value in this field aborts the write operation"]
     #[inline(always)]
     pub fn passwd(self) -> &'a mut W {
         self.variant(KEY_AW::PASSWD)

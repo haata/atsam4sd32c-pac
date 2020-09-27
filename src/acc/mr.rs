@@ -303,9 +303,9 @@ impl<'a> SELPLUS_W<'a> {
 #[doc = "Analog Comparator Enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ACEN_A {
-    #[doc = "0: Analog comparator disabled."]
+    #[doc = "0: Analog comparator disabled"]
     DIS = 0,
-    #[doc = "1: Analog comparator enabled."]
+    #[doc = "1: Analog comparator enabled"]
     EN = 1,
 }
 impl From<ACEN_A> for bool {
@@ -348,12 +348,12 @@ impl<'a> ACEN_W<'a> {
             self.bit(variant.into())
         }
     }
-    #[doc = "Analog comparator disabled."]
+    #[doc = "Analog comparator disabled"]
     #[inline(always)]
     pub fn dis(self) -> &'a mut W {
         self.variant(ACEN_A::DIS)
     }
-    #[doc = "Analog comparator enabled."]
+    #[doc = "Analog comparator enabled"]
     #[inline(always)]
     pub fn en(self) -> &'a mut W {
         self.variant(ACEN_A::EN)
@@ -457,9 +457,9 @@ impl<'a> EDGETYP_W<'a> {
 #[doc = "Invert Comparator Output\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum INV_A {
-    #[doc = "0: Analog comparator output is directly processed."]
+    #[doc = "0: Analog comparator output is directly processed"]
     DIS = 0,
-    #[doc = "1: Analog comparator output is inverted prior to being processed."]
+    #[doc = "1: Analog comparator output is inverted prior to being processed"]
     EN = 1,
 }
 impl From<INV_A> for bool {
@@ -502,12 +502,12 @@ impl<'a> INV_W<'a> {
             self.bit(variant.into())
         }
     }
-    #[doc = "Analog comparator output is directly processed."]
+    #[doc = "Analog comparator output is directly processed"]
     #[inline(always)]
     pub fn dis(self) -> &'a mut W {
         self.variant(INV_A::DIS)
     }
-    #[doc = "Analog comparator output is inverted prior to being processed."]
+    #[doc = "Analog comparator output is inverted prior to being processed"]
     #[inline(always)]
     pub fn en(self) -> &'a mut W {
         self.variant(INV_A::EN)
@@ -532,9 +532,9 @@ impl<'a> INV_W<'a> {
 #[doc = "Selection Of Fault Source\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SELFS_A {
-    #[doc = "0: The CE flag is used to drive the FAULT output."]
+    #[doc = "0: The CE flag is used to drive the FAULT output"]
     CE = 0,
-    #[doc = "1: The output of the analog comparator flag is used to drive the FAULT output."]
+    #[doc = "1: The output of the analog comparator flag is used to drive the FAULT output"]
     OUTPUT = 1,
 }
 impl From<SELFS_A> for bool {
@@ -577,12 +577,12 @@ impl<'a> SELFS_W<'a> {
             self.bit(variant.into())
         }
     }
-    #[doc = "The CE flag is used to drive the FAULT output."]
+    #[doc = "The CE flag is used to drive the FAULT output"]
     #[inline(always)]
     pub fn ce(self) -> &'a mut W {
         self.variant(SELFS_A::CE)
     }
-    #[doc = "The output of the analog comparator flag is used to drive the FAULT output."]
+    #[doc = "The output of the analog comparator flag is used to drive the FAULT output"]
     #[inline(always)]
     pub fn output(self) -> &'a mut W {
         self.variant(SELFS_A::OUTPUT)
@@ -607,9 +607,9 @@ impl<'a> SELFS_W<'a> {
 #[doc = "Fault Enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum FE_A {
-    #[doc = "0: The FAULT output is tied to 0."]
+    #[doc = "0: The FAULT output is tied to 0"]
     DIS = 0,
-    #[doc = "1: The FAULT output is driven by the signal defined by SELFS."]
+    #[doc = "1: The FAULT output is driven by the signal defined by SELFS"]
     EN = 1,
 }
 impl From<FE_A> for bool {
@@ -652,12 +652,12 @@ impl<'a> FE_W<'a> {
             self.bit(variant.into())
         }
     }
-    #[doc = "The FAULT output is tied to 0."]
+    #[doc = "The FAULT output is tied to 0"]
     #[inline(always)]
     pub fn dis(self) -> &'a mut W {
         self.variant(FE_A::DIS)
     }
-    #[doc = "The FAULT output is driven by the signal defined by SELFS."]
+    #[doc = "The FAULT output is driven by the signal defined by SELFS"]
     #[inline(always)]
     pub fn en(self) -> &'a mut W {
         self.variant(FE_A::EN)

@@ -4,11 +4,11 @@ pub type W = crate::W<u32, super::WPCR>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum WPCMD_AW {
-    #[doc = "0: Disables the software write protection of the register groups of which the bit WPRGx is at '1'."]
+    #[doc = "0: Disables the software write protection of the register groups of which the bit WPRGx is at '1'"]
     DISABLE_SW_PROT = 0,
-    #[doc = "1: Enables the software write protection of the register groups of which the bit WPRGx is at '1'."]
+    #[doc = "1: Enables the software write protection of the register groups of which the bit WPRGx is at '1'"]
     ENABLE_SW_PROT = 1,
-    #[doc = "2: Enables the hardware write protection of the register groups of which the bit WPRGx is at '1'. Only a hardware reset of the PWM controller can disable the hardware write protection. Moreover, to meet security requirements, the PIO lines associated with the PWM can not be configured through the PIO interface."]
+    #[doc = "2: Enables the hardware write protection of the register groups of which the bit WPRGx is at '1'. Only a hardware reset of the PWM controller can disable the hardware write protection. Moreover, to meet security requirements, the PIO lines associated with the PWM can not be configured through the PIO interface"]
     ENABLE_HW_PROT = 2,
 }
 impl From<WPCMD_AW> for u8 {
@@ -27,17 +27,17 @@ impl<'a> WPCMD_W<'a> {
     pub fn variant(self, variant: WPCMD_AW) -> &'a mut W {
         unsafe { self.bits(variant.into()) }
     }
-    #[doc = "Disables the software write protection of the register groups of which the bit WPRGx is at '1'."]
+    #[doc = "Disables the software write protection of the register groups of which the bit WPRGx is at '1'"]
     #[inline(always)]
     pub fn disable_sw_prot(self) -> &'a mut W {
         self.variant(WPCMD_AW::DISABLE_SW_PROT)
     }
-    #[doc = "Enables the software write protection of the register groups of which the bit WPRGx is at '1'."]
+    #[doc = "Enables the software write protection of the register groups of which the bit WPRGx is at '1'"]
     #[inline(always)]
     pub fn enable_sw_prot(self) -> &'a mut W {
         self.variant(WPCMD_AW::ENABLE_SW_PROT)
     }
-    #[doc = "Enables the hardware write protection of the register groups of which the bit WPRGx is at '1'. Only a hardware reset of the PWM controller can disable the hardware write protection. Moreover, to meet security requirements, the PIO lines associated with the PWM can not be configured through the PIO interface."]
+    #[doc = "Enables the hardware write protection of the register groups of which the bit WPRGx is at '1'. Only a hardware reset of the PWM controller can disable the hardware write protection. Moreover, to meet security requirements, the PIO lines associated with the PWM can not be configured through the PIO interface"]
     #[inline(always)]
     pub fn enable_hw_prot(self) -> &'a mut W {
         self.variant(WPCMD_AW::ENABLE_HW_PROT)

@@ -6,15 +6,15 @@ pub type W = crate::W<u32, super::MATRIX_MCFG>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum ULBT_A {
-    #[doc = "0: No predicted end of burst is generated and therefore INCR bursts coming from this master cannot be broken."]
+    #[doc = "0: No predicted end of burst is generated and therefore INCR bursts coming from this master cannot be broken"]
     INFINITE = 0,
-    #[doc = "1: The undefined length burst is treated as a succession of single access allowing rearbitration at each beat of the INCR burst."]
+    #[doc = "1: The undefined length burst is treated as a succession of single access allowing rearbitration at each beat of the INCR burst"]
     SINGLE = 1,
-    #[doc = "2: The undefined length burst is split into a 4-beat bursts allowing rearbitration at each 4-beat burst end."]
+    #[doc = "2: The undefined length burst is split into a 4-beat bursts allowing rearbitration at each 4-beat burst end"]
     FOUR_BEAT = 2,
-    #[doc = "3: The undefined length burst is split into 8-beat bursts allowing rearbitration at each 8-beat burst end."]
+    #[doc = "3: The undefined length burst is split into 8-beat bursts allowing rearbitration at each 8-beat burst end"]
     EIGHT_BEAT = 3,
-    #[doc = "4: The undefined length burst is split into 16-beat bursts allowing rearbitration at each 16-beat burst end."]
+    #[doc = "4: The undefined length burst is split into 16-beat bursts allowing rearbitration at each 16-beat burst end"]
     SIXTEEN_BEAT = 4,
 }
 impl From<ULBT_A> for u8 {
@@ -75,27 +75,27 @@ impl<'a> ULBT_W<'a> {
     pub fn variant(self, variant: ULBT_A) -> &'a mut W {
         unsafe { self.bits(variant.into()) }
     }
-    #[doc = "No predicted end of burst is generated and therefore INCR bursts coming from this master cannot be broken."]
+    #[doc = "No predicted end of burst is generated and therefore INCR bursts coming from this master cannot be broken"]
     #[inline(always)]
     pub fn infinite(self) -> &'a mut W {
         self.variant(ULBT_A::INFINITE)
     }
-    #[doc = "The undefined length burst is treated as a succession of single access allowing rearbitration at each beat of the INCR burst."]
+    #[doc = "The undefined length burst is treated as a succession of single access allowing rearbitration at each beat of the INCR burst"]
     #[inline(always)]
     pub fn single(self) -> &'a mut W {
         self.variant(ULBT_A::SINGLE)
     }
-    #[doc = "The undefined length burst is split into a 4-beat bursts allowing rearbitration at each 4-beat burst end."]
+    #[doc = "The undefined length burst is split into a 4-beat bursts allowing rearbitration at each 4-beat burst end"]
     #[inline(always)]
     pub fn four_beat(self) -> &'a mut W {
         self.variant(ULBT_A::FOUR_BEAT)
     }
-    #[doc = "The undefined length burst is split into 8-beat bursts allowing rearbitration at each 8-beat burst end."]
+    #[doc = "The undefined length burst is split into 8-beat bursts allowing rearbitration at each 8-beat burst end"]
     #[inline(always)]
     pub fn eight_beat(self) -> &'a mut W {
         self.variant(ULBT_A::EIGHT_BEAT)
     }
-    #[doc = "The undefined length burst is split into 16-beat bursts allowing rearbitration at each 16-beat burst end."]
+    #[doc = "The undefined length burst is split into 16-beat bursts allowing rearbitration at each 16-beat burst end"]
     #[inline(always)]
     pub fn sixteen_beat(self) -> &'a mut W {
         self.variant(ULBT_A::SIXTEEN_BEAT)

@@ -13,9 +13,9 @@ impl crate::ResetValue for super::MR {
 #[doc = "Brownout Detector Reset Enable\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum BODRSTEN_A {
-    #[doc = "0: The core reset signal vddcore_nreset is not affected when a brownout detection occurs."]
+    #[doc = "0: The core reset signal vddcore_nreset is not affected when a brownout detection occurs"]
     NOT_ENABLE = 0,
-    #[doc = "1: The core reset signal, vddcore_nreset is asserted when a brownout detection occurs."]
+    #[doc = "1: The core reset signal, vddcore_nreset is asserted when a brownout detection occurs"]
     ENABLE = 1,
 }
 impl From<BODRSTEN_A> for bool {
@@ -58,12 +58,12 @@ impl<'a> BODRSTEN_W<'a> {
             self.bit(variant.into())
         }
     }
-    #[doc = "The core reset signal vddcore_nreset is not affected when a brownout detection occurs."]
+    #[doc = "The core reset signal vddcore_nreset is not affected when a brownout detection occurs"]
     #[inline(always)]
     pub fn not_enable(self) -> &'a mut W {
         self.variant(BODRSTEN_A::NOT_ENABLE)
     }
-    #[doc = "The core reset signal, vddcore_nreset is asserted when a brownout detection occurs."]
+    #[doc = "The core reset signal, vddcore_nreset is asserted when a brownout detection occurs"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut W {
         self.variant(BODRSTEN_A::ENABLE)
@@ -88,9 +88,9 @@ impl<'a> BODRSTEN_W<'a> {
 #[doc = "Brownout Detector Disable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum BODDIS_A {
-    #[doc = "0: The core brownout detector is enabled."]
+    #[doc = "0: The core brownout detector is enabled"]
     ENABLE = 0,
-    #[doc = "1: The core brownout detector is disabled."]
+    #[doc = "1: The core brownout detector is disabled"]
     DISABLE = 1,
 }
 impl From<BODDIS_A> for bool {
@@ -133,12 +133,12 @@ impl<'a> BODDIS_W<'a> {
             self.bit(variant.into())
         }
     }
-    #[doc = "The core brownout detector is enabled."]
+    #[doc = "The core brownout detector is enabled"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut W {
         self.variant(BODDIS_A::ENABLE)
     }
-    #[doc = "The core brownout detector is disabled."]
+    #[doc = "The core brownout detector is disabled"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut W {
         self.variant(BODDIS_A::DISABLE)
@@ -163,9 +163,9 @@ impl<'a> BODDIS_W<'a> {
 #[doc = "Voltage Regulator Enable\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ONREG_A {
-    #[doc = "0: Internal voltage regulator is not used (external power supply is used)."]
+    #[doc = "0: Internal voltage regulator is not used (external power supply is used)"]
     ONREG_UNUSED = 0,
-    #[doc = "1: Internal voltage regulator is used."]
+    #[doc = "1: Internal voltage regulator is used"]
     ONREG_USED = 1,
 }
 impl From<ONREG_A> for bool {
@@ -208,12 +208,12 @@ impl<'a> ONREG_W<'a> {
             self.bit(variant.into())
         }
     }
-    #[doc = "Internal voltage regulator is not used (external power supply is used)."]
+    #[doc = "Internal voltage regulator is not used (external power supply is used)"]
     #[inline(always)]
     pub fn onreg_unused(self) -> &'a mut W {
         self.variant(ONREG_A::ONREG_UNUSED)
     }
-    #[doc = "Internal voltage regulator is used."]
+    #[doc = "Internal voltage regulator is used"]
     #[inline(always)]
     pub fn onreg_used(self) -> &'a mut W {
         self.variant(ONREG_A::ONREG_USED)
@@ -238,9 +238,9 @@ impl<'a> ONREG_W<'a> {
 #[doc = "Oscillator Bypass\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum OSCBYPASS_A {
-    #[doc = "0: No effect. Clock selection depends on the value of XTALSEL (SUPC_CR)."]
+    #[doc = "0: No effect. Clock selection depends on the value of XTALSEL (SUPC_CR)"]
     NO_EFFECT = 0,
-    #[doc = "1: The 32 kHz crystal oscillator is bypassed if XTALSEL (SUPC_CR) is set. OSCBYPASS must be set prior to setting XTALSEL."]
+    #[doc = "1: The 32 kHz crystal oscillator is bypassed if XTALSEL (SUPC_CR) is set. OSCBYPASS must be set prior to setting XTALSEL"]
     BYPASS = 1,
 }
 impl From<OSCBYPASS_A> for bool {
@@ -283,12 +283,12 @@ impl<'a> OSCBYPASS_W<'a> {
             self.bit(variant.into())
         }
     }
-    #[doc = "No effect. Clock selection depends on the value of XTALSEL (SUPC_CR)."]
+    #[doc = "No effect. Clock selection depends on the value of XTALSEL (SUPC_CR)"]
     #[inline(always)]
     pub fn no_effect(self) -> &'a mut W {
         self.variant(OSCBYPASS_A::NO_EFFECT)
     }
-    #[doc = "The 32 kHz crystal oscillator is bypassed if XTALSEL (SUPC_CR) is set. OSCBYPASS must be set prior to setting XTALSEL."]
+    #[doc = "The 32 kHz crystal oscillator is bypassed if XTALSEL (SUPC_CR) is set. OSCBYPASS must be set prior to setting XTALSEL"]
     #[inline(always)]
     pub fn bypass(self) -> &'a mut W {
         self.variant(OSCBYPASS_A::BYPASS)
@@ -314,7 +314,7 @@ impl<'a> OSCBYPASS_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum KEY_A {
-    #[doc = "165: Writing any other value in this field aborts the write operation."]
+    #[doc = "165: Writing any other value in this field aborts the write operation"]
     PASSWD = 165,
 }
 impl From<KEY_A> for u8 {
@@ -351,7 +351,7 @@ impl<'a> KEY_W<'a> {
     pub fn variant(self, variant: KEY_A) -> &'a mut W {
         unsafe { self.bits(variant.into()) }
     }
-    #[doc = "Writing any other value in this field aborts the write operation."]
+    #[doc = "Writing any other value in this field aborts the write operation"]
     #[inline(always)]
     pub fn passwd(self) -> &'a mut W {
         self.variant(KEY_A::PASSWD)

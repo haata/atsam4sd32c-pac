@@ -13,9 +13,9 @@ impl crate::ResetValue for super::ACR {
 #[doc = "Current Selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ISEL_A {
-    #[doc = "0: Low-power option."]
+    #[doc = "0: Low-power option"]
     LOPW = 0,
-    #[doc = "1: High-speed option."]
+    #[doc = "1: High-speed option"]
     HISP = 1,
 }
 impl From<ISEL_A> for bool {
@@ -58,12 +58,12 @@ impl<'a> ISEL_W<'a> {
             self.bit(variant.into())
         }
     }
-    #[doc = "Low-power option."]
+    #[doc = "Low-power option"]
     #[inline(always)]
     pub fn lopw(self) -> &'a mut W {
         self.variant(ISEL_A::LOPW)
     }
-    #[doc = "High-speed option."]
+    #[doc = "High-speed option"]
     #[inline(always)]
     pub fn hisp(self) -> &'a mut W {
         self.variant(ISEL_A::HISP)
